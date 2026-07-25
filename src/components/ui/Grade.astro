@@ -1,0 +1,79 @@
+
+---
+import { Icon } from "astro-icon/components";
+const { grade, idx, msg_before, msg_after } = Astro.props
+
+const getGrade = (grade:String) => {
+
+    if (grade == "A") {
+       return "👽";
+    } else if (grade == "B") {
+      return "🧐";
+    }
+}
+---
+
+<div class="flex gap-2">
+	<span
+		id={"grade-" + idx}
+		data-idx={idx}
+		data-grade={grade}
+		class="inline-flex
+		items-center
+		rounded-md
+		bg-white/10
+    opacity-0
+		px-2
+		py-1
+		text-sm
+		font-medium
+		text-gray-300
+		shrink-0
+		transition-colors"
+	>
+	{getGrade(grade)}
+	</span>
+	<button
+			id="lock"
+			class="lock-btn"
+			data-idx={idx}
+			data-grade={grade}
+
+			>
+			<span id={`locked-${idx}`} class="cursor-pointer flex gap-2 text-rose-700" >
+				<Icon name="twemoji:locked" class="mt-1 h-4 w-4"/> <p>{msg_before}</p>
+			</span>
+			<span id={`unlocked-${idx}`} class="hidden cursor-pointer gap-2 text-purple-500">
+				<Icon name="twemoji:unlocked" class="mt-1 h-4 w-4" /> <p>{msg_after}</p>
+			</span>
+	</button>
+</div>
+
+<script>
+	document.addEventListener("click", (event) => {
+		if (!(event.target instanceof Element)) return;
+			const button = event.target instanceof Element ? event.target.closest(".lock-btn") : null;
+			if (!(button instanceof HTMLElement)) return;
+
+			const idx = button.dataset.idx;
+			const grade_id = "grade-" + idx;
+
+			const grade = document.getElementById(grade_id);
+			if (!grade) return;
+
+			const locked = document.getElementById(`locked-${idx}`);
+			const unlocked = document.getElementById(`unlocked-${idx}`);
+
+
+			if (locked){
+				grade.classList.replace("opacity-0", "opacity-100");
+        unlocked?.classList.add("flex")
+				locked.classList.add("hidden");
+				unlocked?.classList.remove("hidden")
+			}
+
+	});
+</script>
+
+
+

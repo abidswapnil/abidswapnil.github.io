@@ -1,0 +1,56 @@
+---
+import Drawer from "../components/layout/Drawer.astro";
+import Sidebar from "../components/layout/Sidebar.astro";
+import Navbar from "../components/layout/Navbar.astro";
+import Footer from "../components/layout/Footer.astro";
+
+import Social from "../components/layout/Social.astro";
+import { ClientRouter } from "astro:transitions";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <ClientRouter />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="preload" href="/fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin/>
+  </head>
+
+  <body class="bg-background/90 min-h-screen scrollbar-thin">
+    <Drawer />
+    <div class="flex flex-1">
+      <Sidebar />
+      <Navbar />
+      <div class="md:fixed hidden bottom-4 left-4">
+        <Social />
+      </div>
+
+      <main class="
+             xl:ml-[13%]
+             max-w-7xl
+             font-serif
+             p-4
+             text-md
+             lg:text-base 
+             leading-7 
+             font-normal 
+             tracking-normal 
+             text-slate-400/80
+             antialiased 
+             md:subpixel-antialiased">
+        <slot />
+      </main>
+    </div>
+    <Footer />
+  </body>
+</html>
+
+
+    <!-- <div class="grid min-h-screen place-items-center">
+      <main class="w-full max-w-6xl p-5 md:p-10">
+        <slot />
+      </main>
+    </div> -->

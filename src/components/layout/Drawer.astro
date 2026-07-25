@@ -1,0 +1,71 @@
+---
+import  "../../styles/global.css";
+import { Icon } from "astro-icon/components";
+import portfolio from "../../data/portfolio.json";
+---
+
+<aside
+  id="drawer"
+  class="fixed inset-y-0 top-0 w-full md:hidden translate-x-full bg-slate-900/70 backdrop-blur-xl z-2 shadow-xl transition-transform duration-300 ">    
+  <div class="flex h-full flex-col">
+    <!-- Header -->
+
+    <!-- Drawer Items -->
+    <nav>
+      <button
+        id="close-button"
+        class="absolute top-3 right-3 z-1 p-1 text-white"
+      >
+        <Icon name="lucide:x" class="h-7 w-7" />
+      </button>
+
+      <ul class="flex flex-col text-slate-400/80 items-end gap-3 pt-16 pr-5">
+        {portfolio.navigation.map((item) => (
+          <li>
+            <a class="link hover:text-white" href={item.href}>
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav> 
+  </div>
+</aside>
+
+<script>
+  const links = document.querySelectorAll(".link")
+  const drawer = document.getElementById("drawer")
+  const close_button = document.getElementById("close-button");
+  const menu_button = document.getElementById("menu-button")
+
+  function openDrawer() {
+    drawer?.classList.remove("translate-x-full");
+  };
+  
+  function closeDrawer() {
+    drawer?.classList.add("translate-x-full");
+  };
+
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+      closeDrawer();
+    }
+  });
+  
+  menu_button?.addEventListener("click", openDrawer);
+  close_button?.addEventListener("click", closeDrawer);
+  
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      closeDrawer();
+
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 300); // match your transition duration
+    });
+});
+
+</script>

@@ -1,0 +1,35 @@
+---
+import portfolio from "../../data/portfolio.json";
+import me from "../../assets/me.avif";
+import "../../styles/global.css";
+import Social from "../../components/layout/Social.astro";
+
+
+const data = portfolio.profile
+
+---
+<section id="about" class="scroll-mt-20 min-h-screen flex items-center">
+  <div class="md:flex md:px-4">
+    <img
+        src={me.src}
+        alt="Abid Shahriar"
+        class="mx-auto my-auto h-48 w-48 shrink-0 rounded-full object-cover
+              border-5 lg:hover:scale-105 transition-transform duration-300 border-cyan-900"
+    />
+    <div class="md:px-10 py-5">
+      <div class="text-4xl md:text-6xl text-gray-200 tracking-wide font-bold text-nowrap">{data.name}</div>
+      <div class="mt-4 font-mono text-nowrap text-md gap-4 text-slate-400 cursor-default flex">
+        {data.title}
+      </div>
+      <span class="typing-wrapper">
+        <span class="mt-5 typing text-lg text-gray-300">
+          {data.tagline}
+        </span>
+      </span>
+      <p set:html={data.about} class="inline-block mt-2 mx-auto"></p> 
+      <div class=" mt-10 mb-6 flex justify-start">
+        <Social />
+      </div>
+    </div>
+  </div>
+</section>

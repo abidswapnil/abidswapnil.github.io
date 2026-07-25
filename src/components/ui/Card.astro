@@ -1,0 +1,45 @@
+---
+const { data } = Astro.props
+import { Icon } from "astro-icon/components";
+
+---
+
+<a href={data.href || data.github}  target="_blank">
+  <div class="h-95 p-5 
+      group
+      relative
+      border-b
+      flex-1
+      border-b-white/20
+      md:shadow-lg
+      md:hover:shadow-white/10
+      border-r
+      border-r-white/20
+      rounded-sm
+      bg-card/25
+      transition
+      ease-out 
+      duration-300 
+      md:hover:-translate-y-1
+      md:hover:translate-x-1 
+      cursor-pointer ">
+    <header>
+      <div class="flex justify-between">
+        <span class="text-sm text-slate-400/50 font-semibold font-mono rounded-sm">{data.date} </span>
+        <span class="text-sm text-slate-400/50 font-semibold rounded-sm">{data.category}</span>
+      </div>
+      <hr class="h-px w-full text-slate-700" />
+    </header>
+    <p class="text-slate-300 text-md mb-2 mt-2 font-semibold">{data.title}</p>
+
+    <div class="mt-2 w-full mb-4">
+      <p set:html={data.description} class="text-sm "></p>
+    </div>
+    <footer class="absolute bottom-3 left-5 right-5 text-sm">
+      <div class="text-slate-400/50 text-sm flex items-center">
+        <span>{data.tools.join(", ")}</span>
+        <Icon name={`lucide:${data.icon}`} class="h-5 w-5 ml-auto group-hover:text-cyan-400 group-hover:duration-300 group-hover:transition-colors" />
+      </div>
+    </footer>
+  </div>
+</a>
