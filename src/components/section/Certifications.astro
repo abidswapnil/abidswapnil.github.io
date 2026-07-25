@@ -5,7 +5,7 @@ import { Icon } from "astro-icon/components";
 
 ---
 
-<section id="certifications" class="scroll-mt-15 min-h-screen flex place-items-center lg:ml-[10%]">
+<section id="certifications" class="scroll-mt-15 min-h-screen flex place-items-center">
 	<div>
     <h2 class="text-2xl mb-4 font-semibold md:px-4 text-slate-200">Certifications</h2>
       <div class="md:px-4 py-5">
@@ -17,8 +17,8 @@ import { Icon } from "astro-icon/components";
                 <Icon name="lucide:award" class="h-4 w-4 mt-1 text-cyan-400 " />
                 <p>{item.title}:</p>
               </div>
-              <a href={item.href} class="inline hover:underline hover:text-cyan-400" target="_blank">
-                <p class="ml-2 ordinal ">
+              <a href={item.href} class="hover:underline hover:text-cyan-400" target="_blank">
+                <p class="ml-2 ordinal inline">
                   {item.for}
                   <Icolink class="h-4 inline align-text-bottom shrink-0 w-4 ml-1 mt-1  group-hover:text-cyan-400 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300"/>
                 </p>

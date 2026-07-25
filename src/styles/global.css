@@ -73,12 +73,12 @@ html {
 
 .typing-wrapper {
   display: inline-block;
-  width: 26ch; /* reserve space */
+  width: 25ch; /* reserve space */
 }
 
 .typing {
   display: inline-block;
-  width: 26ch;          /* final width */
+  width: 25ch;          /* final width */
   overflow: hidden;
   white-space: nowrap;
   font-family: monospace;

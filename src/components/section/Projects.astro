@@ -3,10 +3,10 @@ import portfolio from "../../data/portfolio.json";
 import Card from "../ui/Card.astro";
 ---
 
-<section id="projects" class="scroll-mt-20 min-h-screen flex place-items-center lg:ml-[10%]">
+<section id="projects" class="scroll-mt-20  min-h-screen place-items-center flex">
 	<div>
     <h2 class="text-2xl mb-4 font-semibold md:px-4 text-slate-200">Projects</h2>
-    <ul class="grid md:px-4 py-5 grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4">
+    <ul class="grid md:px-4 py-5 grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-4">
       {portfolio.projects.map((item) => (
         <li>
           <Card data={item} />
