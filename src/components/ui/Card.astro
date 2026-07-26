@@ -8,15 +8,19 @@ import { Icon } from "astro-icon/components";
   <div class="h-95 p-5 
       group
       relative
-      border-b
-      flex-1
-      border-b-white/20
-      md:shadow-lg
-      md:hover:shadow-white/10
-      border-r
+      md:border-b
+      md:border-r
+      md:border-b-white/20
       border-r-white/20
+      ring
+      md:ring-0
+      ring-white/10
+      shadow-md
+      md:shadow-lg
+      flex-1
+      md:hover:shadow-shadow
       rounded-sm
-      bg-card/25
+      bg-card
       transition
       ease-out 
       duration-300 
@@ -24,21 +28,21 @@ import { Icon } from "astro-icon/components";
       md:hover:translate-x-1 
       cursor-pointer ">
     <header>
-      <div class="flex justify-between">
-        <span class="text-sm text-slate-400/50 font-semibold font-mono rounded-sm">{data.date} </span>
-        <span class="text-sm text-slate-400/50 font-semibold rounded-sm">{data.category}</span>
+      <div class="flex justify-between text-sm text-text-mini font-semibold">
+        <span>{data.date} </span>
+        <span>{data.category}</span>
       </div>
-      <hr class="h-px w-full text-slate-700" />
+      <hr class="h-px w-full border-0 bg-hr" />
     </header>
-    <p class="text-slate-300 text-md mb-2 mt-2 font-semibold">{data.title}</p>
+    <p class="text-text-bright text-md mb-2 mt-2 font-semibold">{data.title}</p>
 
     <div class="mt-2 w-full mb-4">
       <p set:html={data.description} class="text-sm "></p>
     </div>
     <footer class="absolute bottom-3 left-5 right-5 text-sm">
-      <div class="text-slate-400/50 text-sm flex items-center">
+      <div class="text-text-mini text-sm flex items-center">
         <span>{data.tools.join(", ")}</span>
-        <Icon name={`lucide:${data.icon}`} class="h-5 w-5 ml-auto group-hover:text-cyan-400 group-hover:duration-300 group-hover:transition-colors" />
+        <Icon name={`lucide:${data.icon}`} class="h-5 w-5 ml-auto group-hover:text-text-hover group-hover:duration-300 group-hover:transition-colors" />
       </div>
     </footer>
   </div>

@@ -8,7 +8,7 @@ import SubSection from "../section/SubSection.astro";
 
 <section id="education" class="scroll-mt-15 min-h-screen flex place-items-center">
 	<div>
-    <h2 class="text-2xl mb-4 font-semibold md:px-4 text-slate-200">Education</h2>
+    <h2 class="text-2xl mb-4 font-semibold md:px-4 text-text-bright">Education</h2>
 		{portfolio.education.map((item, index) => (
 			<div class="flex
 			     flex-wrap
@@ -17,7 +17,7 @@ import SubSection from "../section/SubSection.astro";
 					 py-5">
 				<div class="flex w-90 flex-nowrap">
 					<Icon name={`twemoji:${item.emoji}`} class="text-md mr-2 mt-1 h-4 w-4"/> 
-				  <span class="text-base text-shadow-emerald-50">{item.end}</span>
+				  <span class="text-base text-text-small">{item.end}</span>
 				</div>
 				{/* <div class="w-90 hidden md:block">
 					<img
@@ -27,8 +27,8 @@ import SubSection from "../section/SubSection.astro";
 					/>
 				</div> */}
 				<div class="flex w-full flex-col">
-          <span class="lg:text-lg text-base text-slate-200">{item.institute}</span>
-          <span class="mb-4 text-sm text-slate-200">{item.degree}</span>
+          <span class="lg:text-lg text-base text-text-bright">{item.institute}</span>
+          <span class="mb-4 text-sm text-text-bright">{item.degree}</span>
 					{item.research && (<SubSection key="Thesis" value={item.research} />)}
 					{item.sec && (<SubSection key="Section" value={item.sec} />)}
 					{item.courses && (<SubSection key="Core courses" value={item.courses} />)}

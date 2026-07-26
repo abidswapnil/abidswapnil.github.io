@@ -6,30 +6,30 @@ import Icolink from "../ui/Icolink.astro";
 
 <section id="experience" class="scroll-mt-15 min-h-screen flex place-items-center">
 	<div>
-    <h2 class="text-2xl mb-4 font-semibold md:px-4 text-slate-200">Experience</h2>
+    <h2 class="text-2xl mb-4 font-semibold md:px-4 text-text-bright">Experience</h2>
 		{portfolio.experience.map((item) => (
 			<a href={item.url} target="_blank">
         <div class="flex
 			      group
-            lg:hover:bg-slate-800/50
+            lg:hover:bg-plate
 			      cursor-pointer
 						flex-wrap 
 						md:flex-nowrap 
 						md:px-4 
 						py-5
             hover:ring-1
-            hover:ring-slate-500/30
+            hover:ring-plate-ring
             rounded-xs
 						transition 
 						delay-75
 						duration-200 
 						ease-linear 
 						hover:bg-accent/5">
-          <span class="text-base w-90 text-gray-400 text-shadow-emerald-50">{item.start} — {item.end}</span>
+          <span class="text-base w-90 text-text-small">{item.start} — {item.end}</span>
           <div class="w-full">
-            <div class="md:flex group-hover:text-cyan-400 text-slate-200 inline-flex">
+            <div class="md:flex group-hover:text-text-hover text-text-bright inline-flex">
               <p class="flex transition-colors lg:text-lg text-base md:gap-2">{item.position}, {item.company} </p>
-              <Icolink class="h-4 shrink-0 w-4 ml-1 mt-1 inline-block align-text-bottom group-hover:text-cyan-400 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
+              <Icolink class="h-4 shrink-0 w-4 ml-1 mt-1 inline-block align-text-bottom group-hover:text-text-hover group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
             </div>
             <ol class="list-disc p-5 ">
               {item.works.map((witem) => (  

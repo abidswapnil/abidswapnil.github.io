@@ -30,34 +30,70 @@ html {
   font-display: swap;
 }
 
+:root {
+
+  --background: #09090BE6;
+  --surface: #18181B;
+  --card: #3F3F46;
+  --plate: #27272A;
+  --plate-ring: #71717A4D;
+  --text-body: #A1A1AACC;
+  --text-hover: #F8FAFC;
+  --text-small: #D4D4D880;
+  --text-mini: #A1A1AA80;
+  --text-bright: #C7CCD1;
+  --text-med: #D4D4D8;
+  --img-border: #3F3F46;
+  --hr: #FFFFFF1A;
+  --border: #919191;
+  --shadow: #09090BE6
+
+
+}
+
+:root[data-theme="blue"] {
+  --background: #0F172AE6;
+  --surface: #162033;
+  --card: #16385C40;
+  --plate: #2B3A52;
+  --plate-ring: #94A3B84D;
+  --text-body: #CBD5E199;
+  --text-hover: #67E8F9;
+  --text-small: #F1F5F9CC;
+  --text-mini: #CBD5E199;
+  --text-bright: #F8FAFC;
+  --text-med: #E5E7EB;
+  --img-border: #0E7490;
+  --hr: #475569;
+  --border: #22D3EE4D;
+  --shadow: #FFFFFF1A
+}
+
+
+
 @theme inline {
   /* Fonts */
   --font-sans : "Courier Prime", sans-serif;
   --font-serif : "Inter", serif;
 
   /* Colors */
-  --color-background: #020617;
-  --color-surface: #0f172a;
-  --color-card: #102d4d;
-
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
-  --color-accent: #22d3ee;
-
-  --color-text: #f8fafc;
-  --color-text-muted: #94a3b8;
-  --color-border: #334155;
-
-  /* Radius */
-  --radius-card: 1rem;
-  --radius-button: 0.75rem;
-
-  /* Shadow */
-  --shadow-card: 0 8px 24px rgb(0 0 0 / 0.2);
-
-  /* Animation token */
-  --animate-fade-in: fade-in 500ms ease-out;
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-plate: var(--plate);
+  --color-plate-ring: var(--plate-ring);
+  --color-text-body: var(--text-body);
+  --color-text-hover: var(--text-hover);
+  --color-text-small: var(--text-small);
+  --color-text-mini: var(--text-mini);
+  --color-text-bright: var(--text-bright);
+  --color-text-med: var(--text-med);
+  --color-img-border: var(--img-border);
+  --color-hr: var(--hr);
+  --color-border: var(--border);
+  --color-shadow: var(--shadow)
 }
+
 
 @keyframes fade-in {
   from {
