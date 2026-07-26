@@ -2,7 +2,7 @@
 const { checked = false } = Astro.props
 ---
 
-<label class="relative inline-flex cursor-pointer top-3 left-3 items-center">
+<label class="fixed inline-flex cursor-pointer top-3 left-3 z-1 items-center">
   <input
     id="theme-toggle"
     type="checkbox"
@@ -20,15 +20,26 @@ const { checked = false } = Astro.props
 </label>
 
 <script>
-  const toggle = document.getElementById("theme-toggle")
-  const root = document.documentElement
+  const toggle = document.getElementById('theme-toggle');
 
-  if (toggle instanceof HTMLInputElement) {
-    toggle.addEventListener("change", () => {
-      console.log(toggle.checked)
-    })
+  function syncToggle() {
+    if (!toggle) return;
+    toggle.checked = document.documentElement.getAttribute('data-theme') === 'blue';
   }
 
-  const theme = localStorage.getItem("theme") ?? "dark"
-  console.log(toggle)
+  // reflect actual saved theme on load (overrides the server-rendered `checked` prop)
+  syncToggle();
+
+  toggle?.addEventListener('change', () => {
+    if (toggle.checked) {
+      document.documentElement.setAttribute('data-theme', 'blue');
+      localStorage.setItem('theme', 'blue');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.removeItem('theme');
+    }
+  });
+
+  // re-sync if using View Transitions (astro:after-swap) — harmless no-op otherwise
+  document.addEventListener('astro:after-swap', syncToggle);
 </script>
