@@ -173,7 +173,7 @@
       "title":"Labbaik",
       "category":"Company",
       "date":"2025",
-      "description": "This is a comprehensive pilgrim companion app by <a target='_blank' class='hover:underline hover:text-cyan-400 font-semibold' href='https://www.hajj.gov.bd/hajj-initiatives/labbayk-app'>Ministry of Religious Affairs of Bangladesh</a> to facilitate the hajj journey for BD pilgrims. I worked as a backend developer in this project before the release of first version. Key features of this app are providig Quran, Hadith library, location tracking, pilgrim health profile and many others. This app has been crossed <span>50k+</span> downloads on <a target='_blank' class='hover:underline hover:text-cyan-400 font-semibold' href='https://play.google.com/store/apps/details?id=com.ooroh.labbayk&hl=en'>Google Play</a>.",
+      "description": "Labbaik is a comprehensive pilgrim companion app by <a target='_blank' class='hover:underline hover:text-cyan-400 font-semibold' href='https://www.hajj.gov.bd/hajj-initiatives/labbayk-app'>Ministry of Religious Affairs of Bangladesh</a> to facilitate the hajj journey for BD pilgrims. I worked as a backend developer in this project before the release of first version. Key features of this app are providig Quran, Hadith library, location tracking, pilgrim health profile and many others. This app has been crossed <span>50k+</span> downloads on <a target='_blank' class='hover:underline hover:text-cyan-400 font-semibold' href='https://play.google.com/store/apps/details?id=com.ooroh.labbayk&hl=en'>Google Play</a>.",
       "tools":["Ruby on rails", "Grape", "PostgreSQL"],
       "github":"...",
       "icon":"plane",
