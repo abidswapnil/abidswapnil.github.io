@@ -47,7 +47,9 @@ html {
   --hr: #FFFFFF1A;
   --border: #919191;
   --shadow: #09090BE6;
-  --drawer: #171717B3
+  --drawer: #171717B3;
+  --side: #FFFFFF80;
+  --side-hover: #FFFFFF;
 
 
 }
@@ -68,7 +70,8 @@ html {
   --hr: #475569;
   --border: #22D3EE4D;
   --shadow: #FFFFFF1A;
-  --drawer: #0F172AB3
+  --drawer: #0F172AB3;
+
 }
 
 
@@ -94,7 +97,9 @@ html {
   --color-hr: var(--hr);
   --color-border: var(--border);
   --color-shadow: var(--shadow);
-  --color-drawer: var(--drawer)
+  --color-drawer: var(--drawer);
+  --color-side: var(--side);
+  --color-side-hover: var(--side-hover);
 }
 
 
