@@ -50,6 +50,8 @@ html {
   --drawer: #171717B3;
   --side: #FFFFFF80;
   --side-hover: #FFFFFF;
+  --checked: #22D3EE;   /* Neon (cyan) */
+  --unchecked: #CBD5E1; /* Neutral (slate) */
 
 
 }
@@ -71,6 +73,8 @@ html {
   --border: #22D3EE4D;
   --shadow: #FFFFFF1A;
   --drawer: #0F172AB3;
+  --checked: #22D3EE;   /* Neon (cyan) */
+  --unchecked: #CBD5E1; /* Neutral (slate) */
 
 }
 
@@ -100,6 +104,9 @@ html {
   --color-drawer: var(--drawer);
   --color-side: var(--side);
   --color-side-hover: var(--side-hover);
+  --color-checked: var(--checked);
+  --color-unchecked: var(--unchecked);
+
 }
 
 
