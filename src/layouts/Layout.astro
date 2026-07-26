@@ -14,12 +14,12 @@ const { title } = Astro.props;
   <head>
     <ClientRouter />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>{title}</title>
     <link rel="preload" href="/fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin/>
   </head>
 
-  <body class="bg-background/90 min-h-screen scrollbar-thin">
+  <body class="bg-background/90 min-h-screen scrollbar-thin overflow-x-hidden">
     <Drawer />
     <div class="flex flex-1">
       <Sidebar />
@@ -29,8 +29,10 @@ const { title } = Astro.props;
       </div>
 
       <main class="
+             w-full
              xl:ml-[13%]
              max-w-7xl
+             mx-auto
              font-serif
              p-4
              text-md
