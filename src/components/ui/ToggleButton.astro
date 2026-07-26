@@ -27,7 +27,6 @@ const { checked = false } = Astro.props
     toggle.checked = document.documentElement.getAttribute('data-theme') === 'blue';
   }
 
-  // reflect actual saved theme on load (overrides the server-rendered `checked` prop)
   syncToggle();
 
   toggle?.addEventListener('change', () => {
@@ -40,6 +39,5 @@ const { checked = false } = Astro.props
     }
   });
 
-  // re-sync if using View Transitions (astro:after-swap) — harmless no-op otherwise
   document.addEventListener('astro:after-swap', syncToggle);
 </script>
