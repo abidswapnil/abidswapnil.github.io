@@ -46,7 +46,8 @@ html {
   --img-border: #3F3F46;
   --hr: #FFFFFF1A;
   --border: #919191;
-  --shadow: #09090BE6
+  --shadow: #09090BE6;
+  --drawer: #171717B3
 
 
 }
@@ -66,7 +67,8 @@ html {
   --img-border: #0E7490;
   --hr: #475569;
   --border: #22D3EE4D;
-  --shadow: #FFFFFF1A
+  --shadow: #FFFFFF1A;
+  --drawer: #0F172AB3
 }
 
 
@@ -91,7 +93,8 @@ html {
   --color-img-border: var(--img-border);
   --color-hr: var(--hr);
   --color-border: var(--border);
-  --color-shadow: var(--shadow)
+  --color-shadow: var(--shadow);
+  --color-drawer: var(--drawer)
 }
 
 
