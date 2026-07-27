@@ -55,8 +55,8 @@ html {
   --side: #756B60;
   --side-hover: #2F2B27;
 
-  --checked: #6B4F3A;
-  --unchecked: #756B60;
+  --checked: #67E8F9;
+  --unchecked: #E8DFD0;
 
   --badge: #E8DFD0;
 
@@ -86,8 +86,8 @@ html {
   --side: #94A3B8;
   --side-hover: #F8FAFC;
   --drawer: #0F172AB3;
-  --checked: #1E3A5F;  
-  --unchecked: #CBD5E1; 
+  --checked: #67E8F9; 
+  --unchecked: #E8DFD0;
   --badge: #D1FAE51A;
   --nav-bg: #0F172A;
   --nav-text: #FFFFFF80;
