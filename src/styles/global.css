@@ -31,31 +31,37 @@ html {
 }
 
 :root {
+  --background: #F3F0EA;
+  --surface: #FBF9F5;
+  --card: #E9E3D9;
+  --card-border: #D2C8BA;
+  --plate: #F0EBE2;
+  --plate-ring: #A08F7833;
 
-  --background: #F4F8FB;
-  --surface: #FCFDFE;
-  --card: #E6EEF6;
-  --card-border: #CBD5E1;
-  --plate: #EEF4F9;
-  --plate-ring: #94A3B833;
-  --text-body: #334155CC;
-  --text-hover: #0369A1;
-  --text-small: #1E293B;
-  --text-mini: #64748BCC;
-  --text-bright: #020617;
-  --text-med: #0F172A;
-  --img-border: #BFDBFE;
-  --hr: #CBD5E180;
-  --border: #94A3B899;
-  --shadow: #0F172A12;
-  --drawer: #FCFDFEE6;
-  --side: #64748B;
-  --side-hover: #0F172A;
-  --checked: #1E3A5F;
-  --unchecked: #64748B;
-  --badge: #D6EAFB;
-  --nav-bg: #1E3A5F;
-  --nav-text: #CBD5E1;
+  --text-body: #4A4A42CC;
+  --text-hover: #8B5E3C;
+  --text-small: #2F2B27;
+  --text-mini: #6B645BCC;
+  --text-bright: #1F1C19;
+  --text-med: #2A2622;
+
+  --img-border: #D8CCB8;
+  --hr: #D2C8BA80;
+  --border: #B5A89499;
+  --shadow: #2A262214;
+
+  --drawer: #FBF9F5E6;
+
+  --side: #756B60;
+  --side-hover: #2F2B27;
+
+  --checked: #6B4F3A;
+  --unchecked: #756B60;
+
+  --badge: #E8DFD0;
+
+  --nav-bg: #4F5F75;
+  --nav-text: #E8E2D9;
   --nav-text-hover: #FFFFFF;
 
 }
