@@ -52,7 +52,10 @@ html {
   --side-hover: #0F172A;
   --checked: #22D3EE;
   --unchecked: #64748B;
-  --badge: #D6EAFB
+  --badge: #D6EAFB;
+--nav-bg: #1E3A5F;
+--nav-text: #CBD5E1;
+--nav-text-hover: #FFFFFF;
 
 }
 
@@ -78,6 +81,9 @@ html {
   --checked: #22D3EE;  
   --unchecked: #CBD5E1; 
   --badge: #D1FAE51A;
+  --nav-bg: #0F172A;
+  --nav-text: #FFFFFF80;
+  --nav-hover: #FFFFFF; 
 
 }
 
@@ -110,6 +116,9 @@ html {
   --color-checked: var(--checked);
   --color-unchecked: var(--unchecked);
   --color-badge: var(--badge);
+  --color-nav-bg: var(--nav-bg);
+  --color-nav-text: var(--nav-text);
+  --color-nav-hover: var(--nav-hover);
 
 }
 

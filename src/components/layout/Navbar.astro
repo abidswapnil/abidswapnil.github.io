@@ -14,9 +14,10 @@ import portfolio from "../../data/portfolio.json";
       left-0
       z-1
       w-full
-      bg-background/50
+      bg-nav-bg
       backdrop-blur-xl
-      hidden sm:flex xl:hidden
+      hidden min-[770px]:flex 
+      max-[770px]:hidden
       justify-center
       gap-8
       px-8
@@ -28,10 +29,10 @@ import portfolio from "../../data/portfolio.json";
           href={item.href}
           class="
             relative
-            text-white/50
+            text-nav-text
             transition-color
             duration-300
-            hover:text-white
+            hover:text-nav-hover
             after:absolute
             after:-bottom-1
             after:left-0
@@ -49,7 +50,7 @@ import portfolio from "../../data/portfolio.json";
               transition-color
               duration-300
               group-hover:translate-x-6
-              group-hover:text-white
+              group-hover:text-text-hover
             "
           >
           {item.title}
