@@ -35,6 +35,7 @@ html {
   --background: #F4F8FB;
   --surface: #FCFDFE;
   --card: #E6EEF6;
+  --card-border: #CBD5E1;
   --plate: #EEF4F9;
   --plate-ring: #94A3B833;
   --text-body: #334155CC;
@@ -50,12 +51,12 @@ html {
   --drawer: #FCFDFEE6;
   --side: #64748B;
   --side-hover: #0F172A;
-  --checked: #22D3EE;
+  --checked: #1E3A5F;
   --unchecked: #64748B;
   --badge: #D6EAFB;
---nav-bg: #1E3A5F;
---nav-text: #CBD5E1;
---nav-text-hover: #FFFFFF;
+  --nav-bg: #1E3A5F;
+  --nav-text: #CBD5E1;
+  --nav-text-hover: #FFFFFF;
 
 }
 
@@ -63,6 +64,7 @@ html {
   --background: #0F172AE6;
   --surface: #162033;
   --card: #16385C40;
+  --card-border: #FFFFFF33;
   --plate: #2B3A52;
   --plate-ring: #94A3B84D;
   --text-body: #CBD5E199;
@@ -119,6 +121,7 @@ html {
   --color-nav-bg: var(--nav-bg);
   --color-nav-text: var(--nav-text);
   --color-nav-hover: var(--nav-hover);
+  --color-card-border: var(--card-border);
 
 }
 
