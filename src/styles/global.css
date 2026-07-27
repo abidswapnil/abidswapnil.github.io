@@ -61,7 +61,7 @@ html {
 }
 
 :root[data-theme="blue"] {
-  --background: #0F172AE6;
+  --background: #0C1424E6;
   --surface: #162033;
   --card: #16385C40;
   --card-border: #FFFFFF33;
