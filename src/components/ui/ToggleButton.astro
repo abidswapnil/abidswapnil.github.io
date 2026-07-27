@@ -1,5 +1,6 @@
 ---
 const { checked = false } = Astro.props
+import { Icon } from "astro-icon/components"
 ---
 
 <label class="fixed top-3 left-3 z-50 inline-flex items-center gap-3 cursor-pointer">
@@ -12,10 +13,10 @@ const { checked = false } = Astro.props
     />
 
     <div
-      class="h-7 w-12 justify-between flex items-center text-sm rounded-full border border-border bg-plate transition-colors duration-300 peer-checked:bg-card"
+      class="h-7 w-12 justify-between flex items-center text-sm backdrop-blur-2xl px-1 rounded-full border border-border bg-plate transition-colors duration-300 peer-checked:bg-card"
     >
-     <span class="p-1 text-unchecked font-bold">G</span>
-     <span class="p-1 text-checked font-bold">N</span>
+     <Icon name="lucide:sun" class="h-4 w-4 text-unchecked" />
+     <Icon name="lucide:moon-star" class="h-4 w-4 text-checked" />
     </div>
 
     <div
