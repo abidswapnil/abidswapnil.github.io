@@ -146,12 +146,13 @@ html {
 
 .typing-wrapper {
   display: inline-block;
-  width: 25ch; /* reserve space */
+  max-width: 100%; /* reserve space */
 }
 
 .typing {
   display: inline-block;
-  width: 25ch;          /* final width */
+  width: 25ch; 
+  max-width: 100%;         /* final width */
   overflow: hidden;
   white-space: nowrap;
   font-family: monospace;
